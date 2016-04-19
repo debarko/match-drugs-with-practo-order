@@ -12,7 +12,6 @@
 			url = url.split('+');
 			url[0] = url[0].trim();
 			url[1] = url[1].trim();
-			$("#url").prop('disabled', true);
 			item_code_in_question = url[0];
 			$.ajax({
 				url: 'https://dose.practo.com/api/v1/drugs?filter=' + url[1],
@@ -22,7 +21,6 @@
 		}
 
 		function savethis(item_code) {
-			$("#url").prop('disabled', false);
 			$('#url').val('');
 			$("#container").contents().remove();
 			$.ajax({
